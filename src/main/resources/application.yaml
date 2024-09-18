@@ -1,3 +1,14 @@
 spring:
   application:
     name: Books
+  liquibase:
+    enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/booksdbx5
+    username: postgres
+    password: SUP3RpostU$3R
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
