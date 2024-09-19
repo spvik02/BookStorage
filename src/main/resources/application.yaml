@@ -12,6 +12,8 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: none
+  aop:
+    proxy-target-class: false
 logging:
   level:
     root: info
