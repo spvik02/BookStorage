@@ -12,3 +12,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: none
+logging:
+  level:
+    root: info
+    edu.spv.books.aop.LoggingAspect: debug
