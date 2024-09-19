@@ -10,6 +10,8 @@ public interface BookService {
 
     List<Book> findAll();
 
+    Book findById(Long id);
+
     Book updatePartiallyById(Long id, Book book);
 
     void deleteById(long id);
