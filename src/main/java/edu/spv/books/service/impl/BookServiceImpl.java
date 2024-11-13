@@ -2,6 +2,8 @@ package edu.spv.books.service.impl;
 
 import edu.spv.books.annotation.CacheAlong;
 import edu.spv.books.entity.Book;
+import edu.spv.books.repository.BaseBookRepository;
+import edu.spv.books.repository.BaseRepository;
 import edu.spv.books.repository.BookRepository;
 import edu.spv.books.service.BookService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +19,8 @@ import java.util.Objects;
 @Service
 public class BookServiceImpl implements BookService {
 
-    private final BookRepository bookRepository;
+    private final BaseBookRepository bookRepository;
+
     @Lazy
     @Autowired
     private BookService bookService;
@@ -58,7 +61,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void deleteById(long id) {
+    public void deleteById(Long id) {
         bookRepository.deleteById(id);
     }
 }
