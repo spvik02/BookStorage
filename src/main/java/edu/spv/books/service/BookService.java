@@ -14,5 +14,5 @@ public interface BookService {
 
     Book updatePartiallyById(Long id, Book book);
 
-    void deleteById(long id);
+    void deleteById(Long id);
 }

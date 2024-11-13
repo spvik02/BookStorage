@@ -7,7 +7,16 @@ spring:
     url: jdbc:postgresql://localhost:5432/booksdbx5
     username: postgres
     password: SUP3RpostU$3R
-    driver-class-name: org.postgresql.Driver
+    driverClassName: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 20000 #20s
+      minimum-idle: 2
+      maximum-pool-size: 5
+      max-lifetime: 900000 #15m
+      jdbcUrl: jdbc:postgresql://localhost:5432/booksdbx5
+      username: postgres
+      password: SUP3RpostU$3R
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
@@ -18,3 +27,4 @@ logging:
   level:
     root: info
     edu.spv.books.aop.LoggingAspect: debug
+    com.zaxxer.hikari: debug
